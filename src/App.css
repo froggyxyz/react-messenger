@@ -1,9 +1,28 @@
 .App {
-  padding: 10px;
+  height: 100vh;
   margin: 0 auto;
-  max-width: 35vw;
+  max-width: 75vw;
+  display: grid;
+  grid-template-areas: 'a b b b b b';
+  column-gap: 10px;
+}
+
+.App > .MuiList-root {
+  grid-area: a;
   border-radius: 5px;
   outline: 1px solid rgb(236, 236, 236);
   box-shadow: 3px 3px 5px rgb(195, 195, 195);
   background: rgb(255, 255, 255);
+}
+
+.messageList {
+  grid-area: b;
+  /* max-width: 35vw; */
+  border-radius: 5px;
+  outline: 1px solid rgb(236, 236, 236);
+  box-shadow: 3px 3px 5px rgb(195, 195, 195);
+  background: rgb(255, 255, 255);
+  display: grid;
+  row-gap: 5px;
+  align-content: end;
 }

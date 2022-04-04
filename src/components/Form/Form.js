@@ -1,8 +1,11 @@
 import './Form.css';
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import { Button, TextField } from '@mui/material';
 
 export const Form = ({ onSubmit }) => {
   const [value, setValue] = useState('');
+
+  const inputRef = useRef();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -14,16 +17,25 @@ export const Form = ({ onSubmit }) => {
     setValue(event.target.value);
   };
 
+  useEffect(() => {
+    inputRef.current?.focus();
+  });
+
   return (
     <form className="form" onSubmit={handleSubmit}>
-      <input
+      <TextField
         className="field"
+        id="filled-basic"
+        variant="filled"
         type="text"
         onChange={changeValue}
         value={value}
         placeholder="Enter your message"
+        inputRef={inputRef}
       />
-      <input className="btn" type="submit" value="Send" />
+      <Button className="btn" variant="contained" type="submit">
+        Send
+      </Button>
     </form>
   );
 };

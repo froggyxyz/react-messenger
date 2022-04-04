@@ -1,11 +1,23 @@
-import './Message.css';
 import React from 'react';
+import {
+  ListItem,
+  ListItemAvatar,
+  Avatar,
+  ListItemText,
+  Typography,
+  Divider,
+} from '@mui/material';
 
-export const Message = ({ author, message }) => {
+export const Message = ({ author, text }) => {
   return (
-    <div className="message">
-      <div className="author">{author}</div>
-      <div>{message}</div>
-    </div>
+    <>
+      <ListItem alignItems="flex-start">
+        <ListItemAvatar>
+          <Avatar alt={author} src="/static/images/avatar/1.jpg" />
+        </ListItemAvatar>
+        <ListItemText primary={author} secondary={text} />
+      </ListItem>
+      <Divider variant="inset" component="li" />
+    </>
   );
 };

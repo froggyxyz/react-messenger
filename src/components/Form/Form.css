@@ -1,28 +1,13 @@
 .form {
-  padding: 10px 0;
   display: flex;
   align-items: stretch;
 }
 
 .form > .field {
   width: 100%;
-  padding: 10px 5px;
-  border-radius: 10px 0 0 10px;
-  border: none;
-  outline: 1px solid rgb(236, 236, 236);
-}
-
-.form > .field:focus {
-  outline: 1px solid rgb(90, 147, 221);
-  transition: all 0.3s linear;
+  border-radius: 5px 0 0 5px;
 }
 
 .form > .btn {
-  height: 100%;
-  padding: 10px 25px;
-  border-radius: 0 10px 10px 0;
-  border: none;
-  background: rgb(90, 147, 221);
-  outline: 1px solid rgb(90, 147, 221);
-  cursor: pointer;
+  border-radius: 0 5px 5px 0;
 }
