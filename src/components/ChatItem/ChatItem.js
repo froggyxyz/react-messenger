@@ -7,7 +7,7 @@ import {
   Divider,
 } from '@mui/material';
 
-export const Chat = ({ avatar, name, text }) => (
+export const ChatItem = ({ avatar, name, text }) => (
   <>
     <ListItem alignItems="flex-start">
       <ListItemAvatar>
